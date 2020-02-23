@@ -1,27 +1,62 @@
-# KabanApp
+<p align="center">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
+<a href="https://slackin-pbfjhfxnsa.now.sh"><img src="https://slackin-pbfjhfxnsa.now.sh/badge.svg"></a>
 
-## Development server
+<a href="https://circleci.com/gh/codediodeio/angular-firestarter"><img src="https://circleci.com/gh/codediodeio/angular-firestarter.svg?style=svg"></a>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+</p>
 
-## Code scaffolding
+# FireStarter
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Firestarter is an Angular PWA powered by Firebase.
 
-## Build
+- [Live Demo](https://firestarter.fireship.io/)
+- [Lessons and Screencasts](https://fireship.io)
+- [Join the Slack Team](https://fireship.page.link/slack)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![](https://firebasestorage.googleapis.com/v0/b/angular-voxer.appspot.com/o/demo-gif.gif?alt=media&token=dadcdb72-eb58-4903-b6b8-c741c27a08c4)
 
-## Running unit tests
+## Features
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular 9.x + Firebase
+- Installable PWA
+- OAuth and Email/Password Signup with Firebase
+- Drag & drop Kanban demo with Firestore
+- Angular Universal SSR with Nest.js deployed to Google Cloud Run
+- Optional SSR Prerendering Script
 
-## Running end-to-end tests
+## Usage
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1.  Run
 
-## Further help
+- `git clone https://github.com/codediodeio/angular-firestarter.git firestarter`
+- `cd firestarter`
+- `npm install`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+2.  Create a project at https://firebase.google.com/ and grab your web config:
+
+![](https://firebasestorage.googleapis.com/v0/b/firestarter-96e46.appspot.com/o/project-config.PNG?alt=media&token=5eabb205-7ba2-4fc3-905f-e9547055e754)
+
+3.  Add the config to your Angular environment
+
+#### src/environments/
+
+Update the `environment.prod.ts` and `environment.ts` files. 
+
+```typescript
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: 'APIKEY',
+    authDomain: 'DEV-APP.firebaseapp.com',
+    databaseURL: 'https://DEV-APP.firebaseio.com',
+    projectId: 'DEV-APP',
+    storageBucket: 'DEV-APP.appspot.com',
+    messagingSenderId: '...',
+    appId: '...',
+  }
+};
+```
+
+
+5.  Run `ng serve`

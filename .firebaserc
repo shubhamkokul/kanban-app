@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kanban-app-518d5": {
+      "hosting": {
+        "kaban-app": [
+          "kanban-app-518d5"
+        ]
+      }
+    }
+  }
+}

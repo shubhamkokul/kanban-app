@@ -6,14 +6,17 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [ 
+    "rewrites": [
       {
         "source": "**",
         "run": {
           "serviceId": "nest-angular-ssr",
-          "region": "us-central1" 
+          "region": "us-central1"
         }
       }
     ]
+  },
+  "storage": {
+    "rules": "storage.rules"
   }
 }
